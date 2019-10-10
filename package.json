@@ -1,5 +1,5 @@
 {
-  "name": "ssr-react-lambda",
+  "name": "aws-lambda-react-serverside-render",
   "version": "0.0.0",
   "description": "A basic example of how to render React components server-side using AWS Lambda and API Gateway",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "build:node_modules": "cp -R node_modules/ dist/node_modules/",
     "zip": "cd dist && zip -r ../lambda_source.zip *"
   },
-  "author": "Natalie Qabazard",
+  "author": "Ramesh Dhason",
   "devDependencies": {
     "@types/react": "^15.0.37",
     "@types/react-dom": "^15.5.0",
