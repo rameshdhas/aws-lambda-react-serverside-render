@@ -1,0 +1,29 @@
+{
+  "name": "ssr-react-lambda",
+  "version": "0.0.0",
+  "description": "A basic example of how to render React components server-side using AWS Lambda and API Gateway",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && rollup -c && node dist/index.js",
+    "build": "tsc && rollup -c && npm run build:node_modules && npm run zip",
+    "build:node_modules": "cp -R node_modules/ dist/node_modules/",
+    "zip": "cd dist && zip -r ../lambda_source.zip *"
+  },
+  "author": "Natalie Qabazard",
+  "devDependencies": {
+    "@types/react": "^15.0.37",
+    "@types/react-dom": "^15.5.0",
+    "@types/aws-serverless-express": "^2.1.1",
+    "@types/express": "^4.0.37",
+    "rollup": "^0.41.6",
+    "tslint": "^5.1.0",
+    "typescript": "^2.1.5"
+  },
+  "dependencies": {
+    "aws-serverless-express": "^3.0.2",
+    "express": "^4.15.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "tslib": "^1.6.0"
+  }
+}
